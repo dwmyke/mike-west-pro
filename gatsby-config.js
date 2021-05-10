@@ -28,10 +28,10 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         // Todo: Layouts
 
-        // defaultLayouts: {
+        defaultLayouts: {
         //   posts: require.resolve("./src/components/posts-layout.js"),
-        //   default: require.resolve("./src/components/default-page-layout.js"),
-        // },
+          default: require.resolve("./src/layouts/page-layout.tsx"),
+        },
       },
     },
     "gatsby-transformer-sharp",
