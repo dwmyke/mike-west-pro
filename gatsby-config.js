@@ -5,7 +5,8 @@ module.exports = {
     image: 'share.jpg',
   },
   plugins: [
-    "gatsby-plugin-sharp",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-offline",
