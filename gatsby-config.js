@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Mikel-Jon West Portfolio",
+    description: "Portfolio site for Mikel-Jon West",
+    image: 'share.jpg',
   },
   plugins: [
     "gatsby-plugin-sharp",
@@ -10,7 +12,13 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        name: 'Mikel-Jon West Protfolio',
+        short_name: 'Mike West Pro',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
+        display: 'minimal-ui',
+        icon: "src/images/profile.png",
       },
     },
     "gatsby-plugin-mdx",
