@@ -26,6 +26,12 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        // Todo: Layouts
+
+        // defaultLayouts: {
+        //   posts: require.resolve("./src/components/posts-layout.js"),
+        //   default: require.resolve("./src/components/default-page-layout.js"),
+        // },
       },
     },
     "gatsby-transformer-sharp",
