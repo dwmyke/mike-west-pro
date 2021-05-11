@@ -2,7 +2,11 @@ module.exports = {
   siteMetadata: {
     title: "Mikel-Jon West Portfolio",
     description: "Portfolio site for Mikel-Jon West",
-    image: 'share.jpg',
+    keywords: [`portfolio`, `video editor`, `media`, `production`, `graphic designer`],
+    siteUrl: `https://mikewest.pro/`,
+    siteImage: '/images/splash.jpg',
+    lang: 'en',
+    type: 'website',
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -20,6 +24,7 @@ module.exports = {
         theme_color: '#ffffff',
         display: 'minimal-ui',
         icon: "src/images/profile.png",
+        lang: `en`,
       },
     },
     {
@@ -30,7 +35,7 @@ module.exports = {
 
         defaultLayouts: {
         //   posts: require.resolve("./src/components/posts-layout.js"),
-          default: require.resolve("./src/layouts/page-layout.tsx"),
+          // default: require.resolve("./src/layouts/page-layout.tsx"),
         },
       },
     },
