@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as GatsbyLink } from 'gatsby';
 import {
   Box,
   Flex,
@@ -15,13 +16,22 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  LinkBox,
+  LinkOverlay,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, UpDownIcon } from '@chakra-ui/icons';
+import { Logo } from './logo';
+import ToggleTheme from './toggleTheme';
 
 const Links = ['Dashboard', 'Projects', 'Team'];
 
-const NavLink = ({ children }: { children: React.ReactNode }) => (
-  <Link
+interface NavLinkProps {
+  linkPath: string
+  children: React.ReactNode
+}
+
+const NavLink = ({ linkPath, children }:NavLinkProps ) => (
+  <Link as={GatsbyLink}
     px={2}
     py={1}
     rounded={'md'}
@@ -29,7 +39,7 @@ const NavLink = ({ children }: { children: React.ReactNode }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={'#'}>
+    to={linkPath}>
     {children}
   </Link>
 );
@@ -49,7 +59,7 @@ export const HeaderNav: React.FunctionComponent = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+            <LinkBox borderRadius={'full'} ml={4} ><LinkOverlay as={GatsbyLink} to="/"><Logo /></LinkOverlay></LinkBox>
             <HStack
               as={'nav'}
               spacing={4}
@@ -60,26 +70,19 @@ export const HeaderNav: React.FunctionComponent = () => {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Button
-              variant={'solid'}
-              colorScheme={'teal'}
-              size={'sm'}
-              mr={4}
-              leftIcon={<AddIcon />}>
-              Action
-            </Button>
-            <Menu>
+            <Box mr={4} >
+                <ToggleTheme />
+                </Box>
+            {/* <Menu isLazy>
               <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                  }
-                />
+                as={IconButton}
+                aria-label={'Options'}
+                // rounded={'full'}
+                variant={'ghost'}
+                cursor={'pointer'}
+                mr={4}
+                icon={<UpDownIcon />}
+                >
               </MenuButton>
               <MenuList>
                 <MenuItem>Link 1</MenuItem>
@@ -87,7 +90,7 @@ export const HeaderNav: React.FunctionComponent = () => {
                 <MenuDivider />
                 <MenuItem>Link 3</MenuItem>
               </MenuList>
-            </Menu>
+            </Menu> */}
           </Flex>
         </Flex>
 
