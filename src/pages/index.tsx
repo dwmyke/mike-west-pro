@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react'
 
 const IndexPage = () => (
     <Box>
-    I'm a page.
+    <h1>I'm a page.</h1>
     </Box>
 )
 
