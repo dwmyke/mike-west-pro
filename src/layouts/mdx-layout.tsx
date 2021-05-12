@@ -10,7 +10,7 @@ const theme = {
     global: {
       ".mdx-prose": {
         h1: {
-          fontSize: "xl",
+          fontSize: "2xl",
           mb: "4",
         },
         p: {

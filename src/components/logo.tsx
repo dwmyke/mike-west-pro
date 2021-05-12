@@ -9,6 +9,7 @@ export function Logo() {
         placeholder="tracedSVG"
         layout="constrained"
         width={45}
+        formats={["auto", "webp", "avif"]}
       />
     )
    }
