@@ -23,7 +23,16 @@ import { HamburgerIcon, CloseIcon, UpDownIcon } from '@chakra-ui/icons';
 import { Logo } from './logo';
 import ToggleTheme from './toggleTheme';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = [
+  {
+  label: "Home",
+  path: "/",
+},
+{
+  label: "Mdx Page",
+  path: "/mdx-page/"
+},
+]
 
 interface NavLinkProps {
   linkPath: string
@@ -65,7 +74,7 @@ export const HeaderNav: React.FunctionComponent = () => {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.label} linkPath={link.path}>{link.label}</NavLink>
               ))}
             </HStack>
           </HStack>
@@ -98,7 +107,7 @@ export const HeaderNav: React.FunctionComponent = () => {
           <Box pb={4}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.label} linkPath={link.path}>{link.label}</NavLink>
               ))}
             </Stack>
           </Box>
