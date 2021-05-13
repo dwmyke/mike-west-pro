@@ -59,7 +59,7 @@ export const HeaderNav: React.FunctionComponent = () => {
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+        <Flex as={'nav'} h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -68,7 +68,7 @@ export const HeaderNav: React.FunctionComponent = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <LinkBox borderRadius={'full'} ml={4} ><LinkOverlay as={GatsbyLink} to="/"><Logo /></LinkOverlay></LinkBox>
+            <LinkBox ml={4} ><LinkOverlay as={GatsbyLink} to="/"><Logo /></LinkOverlay></LinkBox>
             <HStack
               as={'nav'}
               spacing={4}
