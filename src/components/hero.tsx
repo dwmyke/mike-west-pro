@@ -9,6 +9,7 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
+  Flex,
   Grid,
   GridItem,
 } from '@chakra-ui/react';
@@ -24,12 +25,16 @@ interface HeroProps {
 export default function Hero({ heroTitle, heroSubtitle, heroDescription}:HeroProps) {
   return (
     <>
-    <Grid zIndex={1} area={'1/1'}>
+    <Flex zIndex={0} flex={1} position={'absolute'}>
     <HeroBG />
-      <Container maxW={'3xl'}>
+    
+    
+      <Container maxW={'3xl'} >
         <Stack
           as={Box}
           position={'relative'}
+          flex={1}
+          zIndex={4}
           textAlign={'center'}
           spacing={{ base: 8, md: 14 }}
           py={{ base: 20, md: 36 }}>
@@ -51,7 +56,8 @@ export default function Hero({ heroTitle, heroSubtitle, heroDescription}:HeroPro
           </Text>
           </Stack>
       </Container>
-      </Grid>
+      </Flex>
+      
     </>
   );
 }
