@@ -3,16 +3,9 @@ import { Link as GatsbyLink } from 'gatsby';
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
   Link,
   IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
@@ -58,7 +51,7 @@ export const HeaderNav: React.FunctionComponent = () => {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+      <Box as={'header'} bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex as={'nav'} h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
