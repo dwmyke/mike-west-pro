@@ -39,6 +39,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-mdx-embed`,
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
