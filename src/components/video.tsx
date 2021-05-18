@@ -10,7 +10,7 @@ interface VideoProps {
 }
 
 const Video = ({ videoUrl, videoTitle }:VideoProps) => (
-    <AspectRatio mx={8} p={8} maxW="540px"ratio={16 / 9}>
+    <AspectRatio mx={8} p={8} maxW="500px"ratio={16 / 9}>
     <iframe
       src={videoUrl}
       title={videoTitle}
