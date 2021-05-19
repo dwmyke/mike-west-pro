@@ -1,6 +1,6 @@
 import React from "react"
 import {
-    Box,
+    Container,
     AspectRatio 
 } from '@chakra-ui/react'
 
@@ -10,7 +10,8 @@ interface VideoProps {
 }
 
 const Video = ({ videoUrl, videoTitle }:VideoProps) => (
-    <AspectRatio mx={8} p={8} maxW="500px"ratio={16 / 9}>
+    <Container>
+    <AspectRatio maxW="640px" ratio={16 / 9}>
     <iframe
       src={videoUrl}
       title={videoTitle}
@@ -21,5 +22,6 @@ const Video = ({ videoUrl, videoTitle }:VideoProps) => (
       allowFullScreen
     />
     </AspectRatio>
+    </Container>
 )
 export default Video

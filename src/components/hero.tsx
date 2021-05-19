@@ -32,12 +32,13 @@ import Video from './video';
         <>
       <Flex
         w={'full'}
-        h={'60vh'}
+        minH={'60vh'}
         backgroundImage={
           heroImage
         }
         backgroundSize={'cover'}
-        backgroundPosition={'center top'}>
+        backgroundPosition={'center top'}
+        >
 
 <Container maxW={'7xl'}>
         <Stack
@@ -84,26 +85,10 @@ import Video from './video';
             justify={'center'}
             align={'center'}
             position={'relative'}
-            w={'full'}>
-            <Box
-              position={'relative'}
-              height={'300px'}
-              rounded={'2xl'}
-              boxShadow={'2xl'}
-              width={'full'}
-              overflow={'hidden'}>
+            w={'full'}
+            >
+
                 <Video videoUrl={heroVidUrl} videoTitle={heroVidTitle} />
-              {/* <Image
-                alt={'Hero Image'}
-                fit={'cover'}
-                align={'center'}
-                w={'100%'}
-                h={'100%'}
-                src={
-                  'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-                }
-              /> */}
-            </Box>
           </Flex>
         </Stack>
       </Container>
