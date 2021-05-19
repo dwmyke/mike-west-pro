@@ -65,7 +65,7 @@ import Video from './video';
                 colorScheme={'red'}
                 bg={'red.400'}
                 _hover={{ bg: 'red.500' }}>
-                Get started
+                Video Editor
               </Button>
               <Button
                 rounded={'full'}
@@ -73,10 +73,10 @@ import Video from './video';
                 fontWeight={'normal'}
                 px={6}
                 leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-                How It Works
+                Demo Reel
               </Button>
             </Stack>
-            <Text color={'gray.300'}>
+            <Text color={'blue.300'}>
               {heroDescription}
             </Text>
           </Stack>
