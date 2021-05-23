@@ -9,43 +9,24 @@ module.exports = {
     type: 'website',
   },
   plugins: [
+    
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-offline",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-plugin-sharp`,
       options: {
-        name: 'Mikel-Jon West Protfolio',
-        short_name: 'Mike West Pro',
-        start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#ffffff',
-        display: 'minimal-ui',
-        icon: "src/images/profile.png",
-        lang: `en`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        // Todo: Layouts
-
-        defaultLayouts: {
-        //   posts: require.resolve("./src/components/posts-layout.js"),
-          // default: require.resolve("./src/layouts/page-layout.tsx"),
+        defaults: {
+          quality: 70,
+          formats: ['auto', 'webp', 'avif'],
+          placeholder: 'dominantColor',
         },
       },
     },
-    `gatsby-plugin-mdx-embed`,
-    "gatsby-transformer-sharp",
+    'gatsby-transformer-sharp',
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images/`,
       },
       __key: "images",
     },
@@ -64,6 +45,25 @@ module.exports = {
       },
       __key: "pages",
     },
+    `gatsby-plugin-mdx-embed`,
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-offline",
+    
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        // Todo: Layouts
+
+        defaultLayouts: {
+        //   posts: require.resolve("./src/components/posts-layout.js"),
+          // default: require.resolve("./src/layouts/page-layout.tsx"),
+        },
+      },
+    },
+    
+   
     {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
@@ -78,6 +78,19 @@ module.exports = {
          * if your app uses a lot z-index to position elements.
          */
         portalZIndex: 40,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: 'Mikel-Jon West Protfolio',
+        short_name: 'Mike West Pro',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
+        display: 'minimal-ui',
+        icon: "src/images/profile.png",
+        lang: `en`,
       },
     },
   ],

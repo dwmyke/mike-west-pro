@@ -31,7 +31,13 @@ export const query = graphql`
       frontmatter {
         title
         description
-        image
+        image {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
         variant
         tags
         client

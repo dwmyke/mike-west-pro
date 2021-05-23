@@ -1,17 +1,19 @@
 import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
+import Hero from '../components/hero'
 
 const PostTemplate = ({
   data: {
     mdx: {
-      frontmatter: { title, variant, tags },
+      frontmatter: { title, description, variant, tags, image },
       body
     }
   }
 }) => {
   return (
     <main>
+        <Hero heroHeader={title} heroDescription={description} heroImage={image.childImageSharp.fluid.src}/>
       <h1>{`title - ${title}`}</h1>
       <h2>{`variant - ${variant}`}</h2>
       <ul>
