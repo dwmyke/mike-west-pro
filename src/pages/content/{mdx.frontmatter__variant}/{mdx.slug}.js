@@ -33,7 +33,7 @@ export const query = graphql`
         description
         image {
           childImageSharp {
-            fluid {
+            original {
               src
             }
           }

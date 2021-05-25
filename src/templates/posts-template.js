@@ -3,6 +3,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 import Hero from '../components/hero'
 
+
+
 const PostTemplate = ({
   data: {
     mdx: {
@@ -12,8 +14,11 @@ const PostTemplate = ({
   }
 }) => {
   return (
+
+    
+
     <main>
-        <Hero heroHeader={title} heroDescription={description} heroImage={image.childImageSharp.fluid.src}/>
+        <Hero heroHeader={title} heroDescription={description} heroImage={image.childImageSharp.original.src}/>
       <h1>{`title - ${title}`}</h1>
       <h2>{`variant - ${variant}`}</h2>
       <ul>
@@ -30,5 +35,7 @@ const PostTemplate = ({
     </main>
   );
 };
+
+
 
 export default PostTemplate;

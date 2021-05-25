@@ -24,10 +24,11 @@ import Video from './video';
       heroImage?: string
       heroVidUrl?: string
       heroVidTitle?: string
+      heroClient?: string
       children: ReactNode
   }
   
-  export default function Hero({ heroHeader, heroDescription, heroImage, heroVidUrl, heroVidTitle, children }:HeroProps) {
+  export default function Hero({ heroHeader, heroDescription, heroImage, heroVidUrl, heroVidTitle, heroClient, children }:HeroProps) {
     return (
         <>
       <Flex
@@ -40,7 +41,7 @@ import Video from './video';
         backgroundPosition={'center top'}
         >
 
-<Container maxW={'7xl'}>
+<Container maxW={'8xl'}>
         <Stack
           align={'center'}
           spacing={{ base: 8, md: 10 }}
@@ -53,6 +54,10 @@ import Video from './video';
               fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
                {heroHeader}
             </Heading>
+            <Text color={'blue.300'}
+            fontSize={{ base: 'md', sm: 'lg', lg: 'xl' }}>
+              {heroDescription}
+            </Text>
             
             <Stack
               spacing={{ base: 4, sm: 6 }}
@@ -65,7 +70,7 @@ import Video from './video';
                 colorScheme={'red'}
                 bg={'red.400'}
                 _hover={{ bg: 'red.500' }}>
-                Video Editor
+                {heroClient}
               </Button>
               <Button
                 rounded={'full'}
@@ -76,9 +81,6 @@ import Video from './video';
                 Demo Reel
               </Button>
             </Stack>
-            <Text color={'blue.300'}>
-              {heroDescription}
-            </Text>
           </Stack>
           <Flex
             flex={1}
@@ -93,43 +95,8 @@ import Video from './video';
         </Stack>
       </Container>
             
-        {/* <VStack
-          w={'full'}
-          justify={'center'}
-          px={useBreakpointValue({ base: 4, md: 8 })}
-          bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-              
-          <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
-            <Heading
-              color={'white'}
-              fontWeight={700}
-              lineHeight={1.2}
-              fontSize={useBreakpointValue({ base: '5xl', md: '7xl' })}>
-              {heroHeader}
-            </Heading>
-            <Stack direction={'row'}>
-              <Button
-                bg={'blue.400'}
-                rounded={'full'}
-                color={'white'}
-                _hover={{ bg: 'blue.500' }}>
-                Video Editor
-              </Button>
-              <Button
-                bg={'whiteAlpha.300'}
-                rounded={'full'}
-                color={'white'}
-                _hover={{ bg: 'whiteAlpha.500' }}>
-                Writer / Director
-              </Button>
-            </Stack>
-          </Stack>
-          <Stack py={8}>
-          <Video videoUrl={heroVidUrl} videoTitle={heroVidTitle} />
-          </Stack>
-        </VStack>
-        
-         */}
+       {children}
+       
       </Flex>
       </>
     );

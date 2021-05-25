@@ -8,15 +8,19 @@ interface LayoutProps {
   children: ReactNode
 }
 
+const MDXWrapper = (props) => <div className="mdx-prose" {...props} />
+
 const PageLayout = ( { children }: LayoutProps ) => {
 
   
   return (
     <>
     <HeaderNav />
+    <MDXWrapper>
         <Box as="main" minH="90vh">
           {children}
           </Box>
+          </MDXWrapper>
     <Footer />
     </>
   )

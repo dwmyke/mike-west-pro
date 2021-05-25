@@ -8,6 +8,18 @@ const theme = extendTheme({
         heading: "Oxygen",
         body: "Source Sans Pro",
       },
+      global: {
+        ".mdx-prose": {
+          h1: {
+            fontSize: "xl",
+            mb: "4",
+          },
+          p: {
+            fontSize: "sm",
+            lineHeight: "1.4",
+          },
+        },
+      },
   })
 
   export default extendTheme(theme)
