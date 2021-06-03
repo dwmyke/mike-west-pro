@@ -25,6 +25,10 @@ const Links = [
   label: "Mdx Page",
   path: "/mdx-page/"
 },
+{
+  label: "Posts",
+  path: "/content/posts/"
+}
 ]
 
 interface NavLinkProps {

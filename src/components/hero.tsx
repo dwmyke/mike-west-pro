@@ -4,10 +4,11 @@ import {
     Stack,
     Flex,
     Button,
-    VStack,
+    HStack,
     useBreakpointValue,
     useColorModeValue,
     Heading,
+    Tag,
     Container,
     Image,
     Icon,
@@ -25,10 +26,11 @@ import Video from './video';
       heroVidUrl?: string
       heroVidTitle?: string
       heroClient?: string
+      heroTags?: Array<string>
       children: ReactNode
   }
   
-  export default function Hero({ heroHeader, heroDescription, heroImage, heroVidUrl, heroVidTitle, heroClient, children }:HeroProps) {
+  export default function Hero({ heroHeader, heroDescription, heroImage, heroVidUrl, heroVidTitle, heroClient, heroTags, children }:HeroProps) {
     return (
         <>
       <Flex
@@ -49,16 +51,25 @@ import Video from './video';
           direction={{ base: 'column', md: 'row' }}>
           <Stack flex={1} spacing={{ base: 5, md: 10 }}>
             <Heading
+            
               lineHeight={1.1}
               fontWeight={600}
               fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
-               {heroHeader}
+               <Text color={'gray.100'}>{heroHeader}</Text>
             </Heading>
             <Text color={'blue.300'}
             fontSize={{ base: 'md', sm: 'lg', lg: 'xl' }}>
               {heroDescription}
             </Text>
-            
+            <HStack spacing={2} marginTop={{ base: '3', sm: '0' }}>
+              {heroTags?.map((tag) => {
+                return (
+                  <Tag size={'md'} variant="solid" colorsScheme='orange' key={tag}>
+                    {tag}
+                  </Tag>
+                );
+              })}
+            </HStack>
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>

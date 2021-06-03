@@ -19,8 +19,9 @@ const MdxPage = ({
 
   return (
     <>
-      <Link to="/">Back</Link>
+      
       {templates[variant] ? templates[variant] : null}
+      <Link to="/">Back</Link>
     </>
   );
 };
@@ -41,6 +42,8 @@ export const query = graphql`
         variant
         tags
         client
+        video
+        videoTitle
       }
       body
     }
