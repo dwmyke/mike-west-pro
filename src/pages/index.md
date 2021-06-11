@@ -1,9 +1,9 @@
 ---
 title: Mikel-Jon West
-description: I make stuff and I fix stuff.
+description: For hire in Seattle, WA
 image: /images/background.jpg
 video: https://player.vimeo.com/video/330364561?title=0&byline=0&portrait=0
-tags: [Writer/Director, Video Editor]
+tags: [Writer/Director, Video Editor, Visual Designer, Technician]
 ---
 
 import Hero from '../components/hero'

@@ -2,12 +2,21 @@ import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 import Hero from '../components/hero'
-import { Container } from '@chakra-ui/layout';
+import { Container } from '@chakra-ui/react';
 
 const ProjectTemplate = ({
   data: {
     mdx: {
-      frontmatter: { title, description, image, variant, tags, client, video, videoTitle },
+      frontmatter: { 
+        title, 
+        description,
+        date, 
+        image, 
+        variant, 
+        tags, 
+        client, 
+        video, 
+        videoTitle },
       body
     }
   }
@@ -19,6 +28,7 @@ const ProjectTemplate = ({
       <h1>{`title - ${title}`}</h1>
       <h2>{`variant - ${variant}`}</h2>
       <h3>{`client - ${client}`}</h3>
+      <h4>{`Release Date: ${date}`}</h4>
       <ul>
         tags
         {tags

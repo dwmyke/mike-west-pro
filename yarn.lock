@@ -1813,14 +1813,14 @@
     strip-json-comments "^3.1.1"
 
 "@fontsource/oxygen@^4.3.0":
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/oxygen/-/oxygen-4.4.2.tgz#c3320ea424d4c3cb0bea168ff2dc428c119351b0"
-  integrity sha512-XitSAR5IwYMht+079/NZwjqAyEkGDb1JB3w3vKZ/kLNxIcZuu4NSVPrcUfdWGVVh0Vutg4efxBWsIA6EvxU0/A==
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/oxygen/-/oxygen-4.4.5.tgz#823191e7301e832e7af42bc4c091d567547d4db7"
+  integrity sha512-KXL11GAehpKq9SaRWlIobk4rUSq58xFuQ2EreG5bL/qjlo5kPlNPUOSOTzcY+Q5id/OQnxGUbRYlh2rC+8fTuw==
 
 "@fontsource/source-sans-pro@^4.3.0":
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-4.4.2.tgz#3fc42b2512c12f2e305a807804f8e194f205ea33"
-  integrity sha512-tvC3so7mWEoNeIxJbcGOpc5Gdhr30Fip056mRBmBO/F96AfleP8CjLiKRRjoMpzq9XExUB9TDKF8ayCbdsFYFw==
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-4.4.5.tgz#cc4a930ab11d09c90a497429d57abd312c76159b"
+  integrity sha512-WMAz713kgSnI4Re+6h4oBcmcl3ogq2RDLN8yZhP8GRXgR1wCEPZQKo6VC26ifofxdFu1kft0N3fYszQfKwJH0Q==
 
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
@@ -2713,7 +2713,7 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@^15.0.1", "@types/node@^15.0.2":
+"@types/node@*", "@types/node@^15.0.1":
   version "15.9.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-15.9.0.tgz#0b7f6c33ca5618fe329a9d832b478b4964d325a8"
   integrity sha512-AR1Vq1Ei1GaA5FjKL5PBqblTZsL5M+monvGSZwe6sSIdGiuu7Xr/pNwWJY+0ZQuN8AapD/XMB5IzBAyYRFbocA==
@@ -2722,6 +2722,11 @@
   version "14.17.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.2.tgz#1e94476db57ec93a372c7f7d29aa5707cfb92339"
   integrity sha512-sld7b/xmFum66AAKuz/rp/CUO8+98fMpyQ3SBfzzBNGMd/1iHBTAg9oyAvcYlAj46bpc74r91jSw2iFdnx29nw==
+
+"@types/node@^15.12.2":
+  version "15.12.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.12.2.tgz#1f2b42c4be7156ff4a6f914b2fb03d05fa84e38d"
+  integrity sha512-zjQ69G564OCIWIOHSXyQEEDpdpGl+G348RAKY0XXy9Z5kU9Vzv1GMNnkar/ZJ8dzXB3COzD9Mo9NtRZ4xfgUww==
 
 "@types/node@^8.5.7":
   version "8.10.66"

@@ -10,9 +10,11 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
+interface PostProps {
 
+}
 
-export default function PostTemplate() {
+export default function PostTemplate({ }:PostProps) {
   return (
     <Center py={6}>
       <Box
