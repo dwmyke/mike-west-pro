@@ -21,7 +21,6 @@ const MdxPage = ({
     <>
       
       {templates[variant] ? templates[variant] : null}
-      <Link to="/">Back</Link>
     </>
   );
 };
@@ -42,6 +41,7 @@ export const query = graphql`
         }
         variant
         tags
+        category
         client
         video
         videoTitle

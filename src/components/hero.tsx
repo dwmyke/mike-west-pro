@@ -70,7 +70,7 @@ import Video from './video';
                 );
               })}
             </HStack>
-            <Stack
+            {/* <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>
               <Button
@@ -91,7 +91,7 @@ import Video from './video';
                 leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
                 Demo Reel
               </Button>
-            </Stack>
+            </Stack> */}
           </Stack>
           <Flex
             flex={1}

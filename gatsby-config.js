@@ -22,6 +22,7 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
+    `gatsby-remark-images`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -58,8 +59,17 @@ module.exports = {
 
         defaultLayouts: {
         //   posts: require.resolve("./src/components/posts-layout.js"),
-          // default: require.resolve("./src/layouts/page-layout.tsx"),
+           default: require.resolve("./src/layouts/layoutMdx.js"),
         },
+        gatsbyRemarkPlugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 1280,
+							linkImagesToOriginal: false,
+						},
+					},
+				],
       },
     },
     

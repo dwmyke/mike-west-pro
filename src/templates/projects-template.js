@@ -2,7 +2,13 @@ import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 import Hero from '../components/hero'
-import { Container } from '@chakra-ui/react';
+import { 
+  Container,
+  Box,
+  List,
+  ListItem,
+  Divider
+ } from '@chakra-ui/react';
 
 const ProjectTemplate = ({
   data: {
@@ -13,7 +19,8 @@ const ProjectTemplate = ({
         date, 
         image, 
         variant, 
-        tags, 
+        tags,
+        category,
         client, 
         video, 
         videoTitle },
@@ -24,22 +31,19 @@ const ProjectTemplate = ({
   return (
     <main>
         <Hero heroHeader={title} heroDescription={description} heroImage={image.childImageSharp.original.src} heroVidUrl={video} heroVidTitle={videoTitle} heroTags={tags}/>
-        <Container>
-      <h1>{`title - ${title}`}</h1>
-      <h2>{`variant - ${variant}`}</h2>
-      <h3>{`client - ${client}`}</h3>
-      <h4>{`Release Date: ${date}`}</h4>
-      <ul>
-        tags
-        {tags
-          ? tags.map((tag, index) => {
-              return <li key={index}>{tag}</li>;
-            })
-          : null}
-      </ul>
+        <Container maxW="8xl" centerContent fontSize={'xl'}>
+        <Box padding="4" maxW="6xl">
+          <List>
+      <ListItem>{`Category: ${category}`}</ListItem>
+      <ListItem>{`Client: ${client}`}</ListItem>
+      <ListItem>{`Release Date: ${date}`}</ListItem>
+      </List>
+      <Divider />
+      </Box>
       <MDXProvider>
         <MDXRenderer>{body}</MDXRenderer>
       </MDXProvider>
+      
       </Container>
     </main>
   );

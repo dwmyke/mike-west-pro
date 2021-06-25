@@ -1,4 +1,6 @@
 import { extendTheme } from "@chakra-ui/react"
+import "@fontsource/oxygen"
+import "@fontsource/source-sans-pro"
 
 const theme = extendTheme({
     config: {
