@@ -19,7 +19,6 @@ const MdxPage = ({
 
   return (
     <>
-      
       {templates[variant] ? templates[variant] : null}
     </>
   );
@@ -37,6 +36,11 @@ export const query = graphql`
             original {
               src
             }
+          }
+        }
+        embeddedImagesLocal {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
         variant

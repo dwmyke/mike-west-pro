@@ -9,11 +9,19 @@ date: 03-15-2014
 image: lfd-cover.jpg
 video: https://www.youtube-nocookie.com/embed/8SB1WQQFSrQ
 videoTitle: Left for Dead Demo
+embeddedImagesLocal:
+  - lfd-poster.jpg
+  - lfd-cover.jpg
 ---
 
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
+import { SimpleGrid } from '@chakra-ui/react';
 
 Left for Dead is a feature film I directed, co-wrote, and co-produced under __[Mega Ultra Studios](megaultra.space)__ in association with Carter DuBois Productions inspired by the grindhouse exploitation films I grew up on. This was shot on DSLR cameras with custom lenses and edited with Adobe Premiere Pro and After Effects. It's intentionally bad with some great humor and fight choreography, and I'm particularly proud of the soundtrack. Available free to watch on the __[Mega Ultra Studios Roku Channel](https://channelstore.roku.com/details/61101b2967d58e2533e55f329a861eb4/mega-ultra-studios)__ 
 
-![Left for Dead poster](./lfd-poster.jpg)
+<br/>
 
+<SimpleGrid columns={[2, null, 3]} spacing="40px">
+<GatsbyImage alt="Left for Dead poster" image={getImage(props.localImages[0])} />
+<GatsbyImage alt="orange doggo" image={getImage(props.localImages[1])} />
+</SimpleGrid>

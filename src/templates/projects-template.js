@@ -17,7 +17,8 @@ const ProjectTemplate = ({
         title, 
         description,
         date, 
-        image, 
+        image,
+        embeddedImagesLocal,
         variant, 
         tags,
         category,
@@ -40,11 +41,15 @@ const ProjectTemplate = ({
       </List>
       <Divider />
       </Box>
-      <MDXProvider>
-        <MDXRenderer>{body}</MDXRenderer>
-      </MDXProvider>
-      
       </Container>
+      <Box padding="10" alignItems="center">
+      <MDXProvider>
+        <MDXRenderer
+        localImages={embeddedImagesLocal}
+        >{body}</MDXRenderer>
+      </MDXProvider>
+      </Box>
+      
     </main>
   );
 };

@@ -1,12 +1,11 @@
 import React from 'react'
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {
   Box,
   Center,
   Heading,
   Text,
   Stack,
-  Avatar,
   useColorModeValue,
 } from '@chakra-ui/react';
 
@@ -14,7 +13,7 @@ interface PostProps {
 
 }
 
-export default function PostTemplate({ }:PostProps) {
+export default function Post({ }:PostProps) {
   return (
     <Center py={6}>
       <Box

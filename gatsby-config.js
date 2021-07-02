@@ -9,20 +9,6 @@ module.exports = {
     type: 'website',
   },
   plugins: [
-    
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          quality: 70,
-          formats: ['auto', 'webp', 'avif'],
-          placeholder: 'dominantColor',
-        },
-      },
-    },
-    'gatsby-transformer-sharp',
-    `gatsby-remark-images`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -62,17 +48,22 @@ module.exports = {
            default: require.resolve("./src/layouts/layoutMdx.js"),
         },
         gatsbyRemarkPlugins: [
-					{
-						resolve: `gatsby-remark-images`,
-						options: {
-							maxWidth: 1280,
-							linkImagesToOriginal: false,
-						},
-					},
+					
 				],
       },
     },
-    
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          quality: 70,
+          formats: ['auto', 'webp', 'avif'],
+          placeholder: 'dominantColor',
+        },
+      },
+    },
+    'gatsby-transformer-sharp',
    
     {
       resolve: "@chakra-ui/gatsby-plugin",
