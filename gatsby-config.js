@@ -59,7 +59,7 @@ module.exports = {
         defaults: {
           quality: 70,
           formats: ['auto', 'webp', 'avif'],
-          placeholder: 'dominantColor',
+          placeholder: 'tracedSVG',
         },
       },
     },

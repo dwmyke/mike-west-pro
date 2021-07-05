@@ -1,12 +1,10 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import {
     Box,
-    chakra,
     Container,
     Stack,
     Text,
     useColorModeValue,
-    VisuallyHidden,
   } from '@chakra-ui/react';
   import { FaImdb, FaYoutube, FaFacebook, FaLinkedin, FaEnvelope } from 'react-icons/fa';
   import SocialButton from '../components/socialButton'
